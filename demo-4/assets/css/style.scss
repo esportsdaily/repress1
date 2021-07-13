@@ -1,0 +1,740 @@
+/*===========================================================
+
+   Template Name: Repress - One Page Portfolio Html Template
+   Author: OpacityThemes
+   Template URL: 
+   Author URL: https://themeforest.net/user/opacitythemes
+   File Description : Main css file of the template
+	
+=================================================
+  Table of Contents
+=================================================
+    1. Theme Control css
+    2. Reset css
+    3. Global css
+        3.1. Plugin Reset
+            3.1.1 Owl carousel 
+            3.1.2 Magnific Popup
+            3.1.3 Lightbox filter
+            3.1.4 Mouse Icon Plugin
+    4. Navigation area css
+    5. Banner area css
+    6. About area css
+    7. Skill area css
+    8. Services area css
+    9. CallToAction area css
+    10. Portfolio area css
+    11. Resume area css
+    12. Testimonial area css
+    13. Brand carousel area css
+    14. Contact area css
+    15. Footer area css
+    16. Preloader
+    17.Extra(particles)
+=======================================================*/
+/* =================================== */
+/*  1. Theme Control css
+/* =================================== */
+:root{
+    --primary: #e0b068;
+    --secondary: #ffffff;
+    --bg:#111;
+    --bg-second:#222;
+    --hover:  .4s ease;
+}
+/* =================================== */
+/*  2. Reset css
+/* =================================== */
+body{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #fff;
+    font-weight: 400;
+    background: var(--bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: #fff;
+    font-weight: 600;
+}
+
+p {
+    letter-spacing: 0;
+    line-height:1.8;
+}
+
+a{
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+a:focus{
+    outline:none;
+    text-decoration: none;
+}
+
+ul,li{
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-pad{
+    padding: 5.5rem 0 1.2rem 0;
+}
+.lines{
+    display: inline-block;
+    background: var(--primary);
+    width: 50px;
+    height: 2px;
+    border-radius: 2px;
+    vertical-align: middle;
+    margin-right: 6px;
+    line-height: 2px;
+}
+.stroke{
+    color: transparent;
+    -webkit-text-stroke-color: var(--primary);
+    -webkit-text-stroke-width: 1px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    &:hover{
+        color: var(--primary);
+        cursor: crosshair;
+    }
+}
+/* =================================== */
+/*  3. Global css
+/* =================================== */
+::selection{
+    background: var(--primary);
+    color: var(--secondary);
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent,var(--primary));
+    border-radius: 10px;
+}
+.h_btn{
+    display: inline-block;
+    padding: .5rem 2.3rem;
+    text-transform: uppercase;
+    background: var(--primary);
+    color: var(--secondary)!important;
+    font-size: 1rem;
+    text-decoration: none!important;
+    border: solid 1px transparent;
+    transition: all var(--hover);
+    &:hover{
+        border: 1px solid var(--secondary);
+        background: transparent;
+    }
+    &:focus{
+        background: transparent;
+        border: 1px solid var(--secondary);
+    }
+}
+.sec-title{
+    text-transform: uppercase;
+    color: var(--primary);
+}
+.item{
+        padding:20px;
+        margin-bottom: 25px;
+        background: var(--bg-second);
+        border-radius: 5px;
+        box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.66);
+        transition: all var(--hover);
+        &:hover{
+            background: var(--bg);
+        }
+    } 
+/*============
+#3.1 Plugin Reset css===*/
+
+    /*3.1.1 ==#Carrousel Css==*/
+.owl-theme {
+    text-align: center;
+    .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: var(--primary);
+    display: block;
+    transition: all .4s ease;
+    border-radius: 30px;
+}
+}
+.owl-dot.active span {
+    width: 25px!important;
+    background: var(--primary)!important;
+}
+/*3.1.2==#Magnific Popup plgin==*/
+.mfp-bg .mfp-ready{
+    top: 0px!important;
+    left: 0px!important;
+    bottom: 0px!important;
+    right: 0px!important;
+    width: 100%!important;
+    height: 100%!important;
+    z-index: 1042;
+    overflow: hidden;
+    position: fixed;
+    background: #0b0b0b;
+    opacity: 0.8;
+}
+.mfp-figure small {
+    color: var(--primary);
+}
+/*3.1.3==#Filter plugin==*/
+ .port-item{
+    &.show {
+            animation: fade .5s ease-in-out;
+        }
+    &.hide {
+            opacity: 0;
+            display: none;
+        }
+ }
+     
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: scale(.7);
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+/*3.1.4==#Mouse Icon plugin==*/
+.mouse-icon {
+  border: 2px solid var(--primary);
+  border-radius: 16px;
+  height: 40px;
+  width: 24px;
+  display: block;
+  position: absolute;
+  bottom: 35px;
+  z-index: 10;
+  opacity: 0.7;
+    .wheel {
+        position: relative;
+        border-radius: 50%;
+        background: var(--primary);
+        width: 2px;
+        height: 6px;
+        top: 4px;
+        margin-left: auto;
+        margin-right: auto;
+        animation-name: drop;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+}
+@keyframes drop {
+  0% {
+    top: 5px;
+    opacity: 0;
+  }
+  30% {
+    top: 10px;
+    opacity: 1;
+  }
+  100% {
+    top: 25px;
+    opacity: 0;
+  }
+}
+/* =================================== */
+/*  4. Navigation css
+/* =================================== */
+header{
+    .navbar{
+        padding-top: 2.1rem;
+        padding-bottom: 1.1rem;
+        border-bottom: 1px solid transparent;
+        background: transparent;
+        transition: all var(--hover);
+        &.sticky{
+        background:var(--bg);
+        padding-top: 1rem;
+        padding-bottom: .85rem;
+        border-color: var(--bg-second);
+        }
+
+        .navbar-brand{
+            color: var(--secondary);
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 1.5rem;
+            font-family: Open Sans;
+            span{
+                color: var(--primary);
+            }
+        }
+        .navbar-collapse.show{
+            background: var(--bg);
+        }
+        .nav-item{
+            .nav-link{
+                color: var(--secondary);
+                font-size: 1.05rem;
+                margin-left: 1rem;
+                transition: color .2s;
+                &:hover{
+                color: var(--primary);
+                }
+            }
+        }
+        .nav-item .nav-link.active{
+            color: var(--primary);
+        }
+    }
+}
+.navbar button.navbar-toggler.collapsed span{
+    &:nth-child(2){
+        margin: 5px 0;
+        width: 30px;
+    }
+}
+
+.navbar button.navbar-toggler span{
+    height: 2px;
+    width: 30px;
+    display: block;
+    background: #fff;
+    &:nth-child(2){
+        margin: 5px 0;
+        width: 20px;
+        transition: width .5s ease-in-out;
+    }
+}
+/* =================================== */
+/*  5. Banner area css
+/* =================================== */
+.home{
+    position: relative;
+    /*uncomment it if you want image as a background*/
+    /*background:#171717 url("../image/home-bg.jpg") no-repeat right;*/
+    display: flex;
+    background-size: 50%;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 30px 0;
+    .row{
+        .knockout{
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: .23;
+            color: #333;
+            pointer-events: none;
+            user-select: none;
+            line-height: .7;
+            font-size: 19rem;
+            padding: 1rem;
+            font-weight: 900;
+        }
+    }
+}
+/* =================================== */
+/*  6. About area css
+/* =================================== */
+.about{
+    .row{
+        .signature{
+            font-family: 'Mrs Saint Delafield', cursive;
+            color: var(--primary);
+            font-size: 3rem;
+        }
+    }
+}
+/* =================================== */
+/*  7. Skill area css
+/* =================================== */
+.myskill{
+    .element{
+        margin-bottom: 2rem;
+        .progress{
+        height: .5rem;
+        border-radius: 30px;
+        .progress-bar{
+        background: var(--primary);
+        animation: progress 3s ease-in-out alternate;
+    }
+    }
+    }
+}
+@keyframes progress{
+    from{
+        width: 0;
+    }
+}
+/* =================================== */
+/*  8. CallToAction area css
+/* =================================== */
+.cta{
+    background: var(--bg-second);
+}
+/* =================================== */
+/*  9. Resume area css
+/* =================================== */
+.resume{
+    h5{
+        i{
+            color: var(--primary);
+            margin-right: 6px;
+        }
+    }
+    .item{
+        h4{
+            color: var(--primary);
+        }
+    }
+}
+/* =================================== */
+/*  10. Testimonial area css
+/* =================================== */
+.testimonial{
+    .item{
+        i{
+            color: var(--primary);
+            font-size: 2rem;
+        }
+        .img-box{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: block;
+            overflow: hidden;
+        }
+    }
+}
+/* =================================== */
+/*  11. Service area css
+/* =================================== */
+.service{
+    .icon i{
+        font-size: 2.5rem;
+        margin-bottom: 1.2rem;
+        color: var(--primary);
+    }
+}
+/* =================================== */
+/*  12. Portfolio area css
+/* =================================== */
+.portfolio{
+    .port-nav-list{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    .filter-item{
+        display: inline-block;
+        margin: .4rem;
+        background: var(--bg-second);
+        padding: 8px 20px;
+        color: var(--secondary);
+        font-size: 1.1rem;
+        text-decoration: none;
+        cursor: pointer;
+        &.active{
+            background: var(--primary);
+        }
+    }
+    }
+    .portfolio-gallery{
+    .port-item{
+        .single-item{
+            position: relative;
+            overflow: hidden;
+            height: 350px;
+            width: 100%;
+            img{
+                height: 100%;
+                width: 100%;
+                object-position: center;
+                object-fit: cover;
+            }
+            .title{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.938);
+                display: grid;
+                place-content: center;
+                text-align: center;
+                visibility: hidden;
+                opacity: 0;
+                transition: all .5s ease;
+                cursor: crosshair;
+                h4{
+                    color: var(--primary);
+                    transform: translateX(100px);
+                    transition: transform .5s;
+                }
+                span{
+                    transform: translateX(-100px);
+                    transition: transform .7s;
+                    color: var(--secondary);
+                }
+            }
+        }
+        &:hover .title{
+            opacity: 1;
+            visibility: visible;
+            h4,span{
+                transform: translateX(0);
+            }
+        }
+    }
+    }
+}
+/* =================================== */
+/*  13. Brand carousel area css
+/* =================================== */
+.brand .brand-carousel .brand-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     img{
+        opacity: .6;
+        max-width: 130px;  
+        transition: all var(--hover);
+        &:hover{
+            opacity: 1;
+        }
+}
+}
+/* =================================== */
+/*  14. Contact area css
+/* =================================== */
+.contact{
+    .contact-info{
+        h3{
+            font-size: 1.96rem;
+            font-weight: 500;
+        }
+        .address_list{
+            margin-top: 5rem;
+            list-style-type: none;
+            li{
+                list-style-position: inside;
+                margin-bottom: 1.2rem;
+                span{
+                    color: var(--primary);
+                    font-size: 1.32rem;
+                    display: inline-block;
+                    margin: 0 10px;
+                }
+            }
+        }
+        .social_links{
+            li{
+                list-style: none;
+                margin-right: 1.3rem;
+                a{
+                    font-size: 1.3rem;
+                    text-decoration: none;
+                    color: var(--secondary);
+                    transition: color var(--hover);
+                    &:hover{
+                        color: var(--primary);
+                    }
+                }
+            }
+        }
+    }
+    .form-wrapper{
+        background: var(--bg-second);
+        form{
+        .form-input{
+            margin-bottom: 2rem;
+        }
+        .h-form{
+            display: block;
+            width: 100%;
+            border: none;
+            outline: none;
+            background: transparent;
+            border-bottom: 1px solid rgba(255, 250, 250, 0.392);
+            padding: 10px 2px;
+            color: var(--secondary);
+            &::placeholder{
+                color: var(--primary);
+            }
+        }
+    }
+    }
+}
+/* =================================== */
+/*  15. Footer area css
+/* =================================== */
+footer{
+    border-top: 1px solid var(--bg-second);
+    padding: 1rem 0;
+}
+/* =================================== */
+/*  15. Preloader area css
+/* =================================== */
+.loader{
+    position: fixed;
+    z-index: 3000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--bg);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    &.none{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.spinner {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.spinner:before, .spinner:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px dotted var(--primary);
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: sk-bounce 2s linear infinite;
+}
+.spinner:after {
+  animation-delay: -1s;
+}
+
+@keyframes sk-bounce {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+  80% {
+    transform: scale(2.5);
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+/* =================================== */
+/*  15. Particles
+/* =================================== */
+#particles-js{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+/*=========================================================================
+#MEDIA QUERIES============================================================*/
+
+// Extra small devices (portrait phones,  576px)
+
+@media (max-width: 576px) { 
+    /*Global*/
+    .section-pad{
+        padding: 4.7rem 0 .75rem;
+    }
+    /*MAIN STYILING*/
+    /*HOME SECTION*/
+    .mouse-icon{
+        bottom: 20px;
+    }
+    /*CONTACT SECTION*/
+    .contact{
+        .contact-info{
+            h3{
+                font-size: 1.4rem;
+            }
+            .address_list{
+                margin-top: 2rem;
+            }
+            }
+        
+    }
+    /*FOOTER SECTION*/
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 767px) { 
+    /*NAVIGATION SECTION*/
+    header{
+        .navbar{
+            padding-top:1rem;
+            padding-bottom: 0.7rem;
+            &.sticky{
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            }
+        }
+    }
+    /*HOME SECTION*/
+    .knockout{
+        display: none;
+    }
+    /*CONTACT SECTION*/
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .home{
+        .knockout{
+            right: 20%;
+        }
+    }
+ }
+
+ /*=======================================
+ #======================================*/
+

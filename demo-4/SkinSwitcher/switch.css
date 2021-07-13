@@ -1,0 +1,111 @@
+/* styles-switcher */
+
+#styles-switcher {
+    background: #000000;
+    color: #ffffff;
+    width: 202px;
+    position: fixed;
+    top: 35%;
+    z-index: 2099;
+    padding: 20px;
+    left: -202px;
+    transition: all .4s ease;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.35);
+}
+
+#styles-switcher ::selection {
+    background: transparent;
+}
+
+#styles-switcher.show {
+    left: 0;
+}
+
+#styles-switcher ul {
+    padding: 0;
+}
+
+#styles-switcher ul li {
+    list-style-type: none;
+    width: 25px;
+    height: 25px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+#styles-switcher ul li.blue {
+    background: #007bff;
+}
+
+#styles-switcher ul li.brown {
+    background: #795548;
+}
+
+#styles-switcher ul li.purple {
+    background: #6f42c1;
+}
+
+#styles-switcher ul li.indigo {
+    background: #6610f2;
+}
+
+#styles-switcher ul li.red {
+    background: #e63e4f;
+}
+
+#styles-switcher ul li.orange {
+    background: #fd7e14;
+}
+
+#styles-switcher ul li.yellow {
+    background: #ffc107;
+}
+
+#styles-switcher ul li.green {
+    background: #28a745;
+}
+
+#styles-switcher ul li.teal {
+    background: #20c997;
+}
+
+#styles-switcher ul li.cyan {
+    background: #17a2b8;
+}
+
+#styles-switcher ul li.active {
+    transform: scale(0.9);
+    border: 2px solid #fff;
+}
+
+#styles-switcher .switcher-toggle {
+    position: absolute;
+    background: linear-gradient(#f5af19, #f12711);
+    color: #fff;
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 2.4rem;
+    cursor: pointer;
+    border-radius: 0px 4px 4px 0;
+    right: -40px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.switcher-toggle i {
+    animation: rotate 7s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#styles-switcher #reset-color {
+    background: #2c2c2c;
+}
